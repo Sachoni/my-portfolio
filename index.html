@@ -7,47 +7,76 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>John</h1>
-    <p>Ethical Hacker | AI Researcher | Software Developer</p>
+  <!-- Header -->
+  <header class="navbar">
+    <h1 class="logo">John</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I am a passionate ethical hacker, AI researcher, and full-stack developer. 
-      My mission is to build secure, intelligent, and innovative systems 
-      while exploring the depths of technology.
-    </p>
+  <!-- Hero -->
+  <section class="hero">
+    <h2>Hello, I’m John 👋</h2>
+    <p>Ethical Hacker | AI Researcher | Full-Stack Developer</p>
+    <a href="#contact" class="btn">Get in Touch</a>
   </section>
 
-  <section id="skills">
+  <!-- About -->
+  <section id="about" class="about">
+    <img src="profile.jpg" alt="John's photo" class="profile-img">
+    <div>
+      <h2>About Me</h2>
+      <p>
+        I build secure, intelligent, and innovative systems. 
+        My work spans cybersecurity, AI, and full-stack development. 
+        I am the creator of <b>StealthLock</b> and <b>Business Watchman</b>.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="skills">
     <h2>Skills</h2>
-    <ul>
-      <li>Cybersecurity & Ethical Hacking</li>
-      <li>AI & Machine Learning</li>
-      <li>Full-Stack Development (HTML, CSS, JS, Node.js)</li>
-      <li>Custom Software: StealthLock, Business Watchman</li>
-    </ul>
+    <div class="grid">
+      <div class="card">Cybersecurity & Ethical Hacking</div>
+      <div class="card">AI & Machine Learning</div>
+      <div class="card">Full-Stack Development</div>
+      <div class="card">Custom Software Engineering</div>
+    </div>
   </section>
 
-  <section id="projects">
+  <!-- Projects -->
+  <section id="projects" class="projects">
     <h2>Projects</h2>
-    <p>Some of the work I’ve done:</p>
-    <ul>
-      <li><b>StealthLock:</b> Cross-platform secure monitoring software.</li>
-      <li><b>Business Watchman:</b> Employee monitoring & analytics tool.</li>
-      <li><b>Anonymous Housefly:</b> Experimental content platform.</li>
-    </ul>
+    <div class="grid">
+      <div class="card">
+        <h3>StealthLock</h3>
+        <p>Cross-platform secure monitoring software.</p>
+      </div>
+      <div class="card">
+        <h3>Business Watchman</h3>
+        <p>Employee monitoring & analytics tool.</p>
+      </div>
+      <div class="card">
+        <h3>Anonymous Housefly</h3>
+        <p>Experimental content platform with anonymity focus.</p>
+      </div>
+    </div>
   </section>
 
-  <section id="contact">
+  <!-- Contact -->
+  <section id="contact" class="contact">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:john@example.com">john@example.com</a></p>
     <p>GitHub: <a href="https://github.com/yourhandle" target="_blank">github.com/yourhandle</a></p>
     <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>© 2025 John | Built with 💻 & ⚡</p>
   </footer>

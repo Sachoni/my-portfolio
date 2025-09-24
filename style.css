@@ -6,56 +6,140 @@
 
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
     background: #0f172a;
     color: #e2e8f0;
-    padding: 20px;
+    line-height: 1.6;
 }
 
-header {
-    text-align: center;
-    padding: 30px;
+
+/* Navbar */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    background: #111827;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    z-index: 1000;
 }
 
-header h1 {
-    font-size: 2.5rem;
+.navbar .logo {
+    color: #38bdf8;
+    font-size: 1.5rem;
+}
+
+.navbar nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #e2e8f0;
+}
+
+.navbar nav a:hover {
     color: #38bdf8;
 }
 
+
+/* Hero */
+
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: #1e293b;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero .btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #38bdf8;
+    color: #0f172a;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.hero .btn:hover {
+    background: #0284c7;
+}
+
+
+/* About */
+
+.about {
+    display: flex;
+    gap: 30px;
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 20px;
+    align-items: center;
+}
+
+.about img {
+    width: 200px;
+    border-radius: 50%;
+}
+
+
+/* Sections */
+
 section {
-    margin: 40px auto;
-    max-width: 800px;
+    margin: 60px auto;
+    max-width: 1000px;
+    padding: 20px;
 }
 
 h2 {
     color: #38bdf8;
+    margin-bottom: 20px;
+}
+
+
+/* Grid Layouts */
+
+.grid {
+    display: grid;
+    gap: 20px;
+}
+
+.skills .grid,
+.projects .grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.card {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+
+/* Contact */
+
+.contact p {
     margin-bottom: 10px;
 }
 
 a {
     color: #38bdf8;
-    text-decoration: none;
 }
 
-a:hover {
-    text-decoration: underline;
-}
+
+/* Footer */
 
 footer {
     text-align: center;
-    margin-top: 50px;
+    background: #111827;
+    padding: 20px;
     color: #94a3b8;
-    font-size: 0.9rem;
-}
-
-
-}
-a:hover {
-    text-decoration: underline;
-}
-footer {
-    text-align: center;
-    margin-top: 50px;
-    color: #94a3b8;
-    font-size: 0.9rem;
 }
