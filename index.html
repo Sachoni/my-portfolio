@@ -1,20 +1,37 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>John | Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marktech</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>
-  <!-- Hero -->
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="logo.png" alt="Marktech Logo">
+      <h1>Marktech</h1>
+    </div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
   <section class="hero">
-    <img src="abstract.jpg" alt="Hero Background" class="hero-bg">
     <div class="hero-content">
-      <h1>Marktech.com</h1>
-      <p>Hello there.</p>
+      <h1>Welcome to Marktech</h1>
+      <p>...</p>
+      <a href="#about" class="btn learn-more">Learn More</a>
     </div>
   </section>
 
@@ -26,7 +43,6 @@
       <h2><a href="#about" title="About"><i class="fa-solid fa-user"></i></a> About Me</h2>
       <p>
         On-going computer science student.<br>
-        <a href="#about" class="btn learn-more">Learn More</a>
       </p>
     </div>
   </section>
@@ -63,39 +79,48 @@
     </div>
   </section>
 
-  <!-- Contact -->
 
- <section id="contact" class="contact">
-  <h2><i class="fa-solid fa-envelope"></i> Contact</h2>
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2><i class="fa-solid fa-envelope"></i> Contact</h2>
 
-  <div class="contact-buttons">
-    <a href="https://wa.me/25415756371?text=Hello%20Marktech%2C%20I%E2%80%99d%20like%20to%20learn%20more%20about%20your%20services." 
-       target="_blank" 
-       class="btn whatsapp">
-      <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
-    </a>
+    <div class="contact-buttons">
+      <!-- WhatsApp -->
+      <a href="https://wa.me/25415756371?text=Hello%20Marktech%2C%20I%E2%80%99d%20like%20to%20learn%20more%20about%20your%20services."
+         target="_blank"
+         class="btn whatsapp">
+        <i class="fa-brands fa-whatsapp"></i> WhatsApp
+      </a>
 
-    <a href="mailto:wamukotajohnmark@gmail.com?subject=Inquiry%20from%20Marktech%20Website" 
-       class="btn email">
-      <i class="fa-solid fa-envelope"></i> Send Email
-    </a>
+      <!-- Email -->
+      <a href="mailto:wamukotajohnmark@gmail.com?subject=Inquiry%20from%20Marktech%20Website"
+         class="btn email">
+        <i class="fa-solid fa-envelope"></i> Email
+      </a>
 
-    <a href="https://github.com/Sachoni" 
-       target="_blank" 
-       class="btn github">
-      <i class="fa-brands fa-github"></i> View GitHub
-    </a>
-  </div>
-</section>
-
-
+      <!-- GitHub -->
+      <a href="https://github.com/Sachoni"
+         target="_blank"
+         class="btn github">
+        <i class="fa-brands fa-github"></i> GitHub
+      </a>
+    </div>
+  </section>
 
   <!-- Footer -->
-
-  <footer>
-    <!-- Icon navigation bar -->
-  <footer class="icon-bar">
-    <p>© 2025 John | Built with 💻</p>
+  <footer class="footer">
+    <p>&copy; 2025 Marktech. All Rights Reserved.</p>
   </footer>
+
+  <!-- JavaScript for mobile menu -->
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const nav = document.querySelector('nav');
+
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  </script>
+
 </body>
 </html>
