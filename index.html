@@ -1,89 +1,100 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Marktech</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>John | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header -->
-  <header class="navbar">
-    <h1 class="logo">Marktech</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-
   <!-- Hero -->
   <section class="hero">
-    <h2>Hello, I’m Johnmark</h2>
-    <p> AI Researcher | Full-Stack Developer</p>
-    <a href="#contact" class="btn">Get in Touch</a>
+    <img src="abstract.jpg" alt="Hero Background" class="hero-bg">
+    <div class="hero-content">
+      <h1>Marktech.com</h1>
+      <p>Hello there.</p>
+    </div>
   </section>
 
   <!-- About -->
+
   <section id="about" class="about">
     <img src="Logo.png" alt="photo" class="profile-img">
     <div>
-      <h2>About Me</h2>
+      <h2><a href="#about" title="About"><i class="fa-solid fa-user"></i></a> About Me</h2>
       <p>
-        On-going computer science student
-        Developer of <b>Butter-ecommerce</b> and <b>Scribe AI</b>.
+        On-going computer science student.<br>
+        <a href="#about" class="btn learn-more">Learn More</a>
       </p>
     </div>
   </section>
 
   <!-- Skills -->
+
   <section id="skills" class="skills">
-    <h2>Skills</h2>
+    <h2><a href="#skills" title="Skills"><i class="fa-solid fa-gears"></i></a> Services</h2>
     <div class="grid">
-      <div class="card">Cybersecurity & Ethical Hacking tools</div>
+      <div class="card">OS installation</div>
       <div class="card">Document editing</div>
       <div class="card">Photo editing</div>
       <div class="card">Video editing</div>
-      <div class="card">AI & Machine Learning</div>
       <div class="card">Web Development</div>
       <div class="card">Custom Software Engineering</div>
+      <div class="card">Filming and production</div>
+      <div class="card">Major Cyber Services</div>
     </div>
   </section>
 
   <!-- Projects -->
+
   <section id="projects" class="projects">
-    <h2>Projects</h2>
+    <h2><a href="#projects" title="Projects"><i class="fa-solid fa-diagram-project"></i></a> Projects</h2>
     <div class="grid">
       <div class="card">
         <h3>StealthLock</h3>
-        <p>Python based monitoring software for windows PCs.</p>
-      </div>
-      <div class="card">
-        <h3>Sentence classification model</h3>
-        <p>The model now can Classify over 6 types of sentences like questions, comparative sentences etc.</p>
+        <p>Python-based telegram monitoring software for Windows PCs.</p>
       </div>
       <div class="card">
         <h3>Register</h3>
-        <p>Light weight web app for registration of church members.</p>
-      </div>
-      <div class="card">
-        <h3>Computer vision</h3>
-        <p>Based on AI technology I created a model that identifiers hand written text based on GRU Architecture.</p>
+        <p>Lightweight web app for registration of church members.</p>
       </div>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="contact">
-    <h2>Contact</h2>
-    <p>Whatsapp: <a href="#">+25415756371</a></p>
-    <p>Email: <a href="Johnmark:wamukotajohnmark@gmail.com">wamukotajohnmark@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/Sachoni" target="_blank">github.com/Sachoni</a></p>
-  </section>
+
+ <section id="contact" class="contact">
+  <h2><i class="fa-solid fa-envelope"></i> Contact</h2>
+
+  <div class="contact-buttons">
+    <a href="https://wa.me/25415756371?text=Hello%20Marktech%2C%20I%E2%80%99d%20like%20to%20learn%20more%20about%20your%20services." 
+       target="_blank" 
+       class="btn whatsapp">
+      <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+    </a>
+
+    <a href="mailto:wamukotajohnmark@gmail.com?subject=Inquiry%20from%20Marktech%20Website" 
+       class="btn email">
+      <i class="fa-solid fa-envelope"></i> Send Email
+    </a>
+
+    <a href="https://github.com/Sachoni" 
+       target="_blank" 
+       class="btn github">
+      <i class="fa-brands fa-github"></i> View GitHub
+    </a>
+  </div>
+</section>
+
+
 
   <!-- Footer -->
+
   <footer>
+    <!-- Icon navigation bar -->
+  <footer class="icon-bar">
     <p>© 2025 John | Built with 💻</p>
   </footer>
 </body>
