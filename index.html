@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marktech</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="logo.png" alt="Marktech Logo">
+      <h1>Marktech</h1>
+    </div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to Marktech</h1>
+      <p>...</p>
+      <a href="#about" class="btn learn-more">Learn More</a>
+    </div>
+  </section>
+
+  <!-- About -->
+
+  <section id="about" class="about">
+    <img src="WhatsApp.jpeg" alt="photo" class="profile-img">
+    <div>
+      <h2><a href="#about" title="About"><i class="fa-solid fa-user"></i></a> About Me</h2>
+      <p>
+        On-going computer science student.<br>
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+
+  <section id="skills" class="skills">
+    <h2><a href="show.html" title="Skills"><i class="fa-solid fa-gears"></i></a> Click the gears to see the services</h2>
+  </section>
+
+  <!-- Projects -->
+
+  <section id="projects" class="projects">
+    <h2><a href="#projects" title="Projects"><i class="fa-solid fa-diagram-project"></i></a> Projects</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>StealthLock</h3>
+        <p>Python-based telegram monitoring software for Windows PCs.</p>
+      </div>
+      <div class="card">
+        <h3>Register</h3>
+        <p>Lightweight web app for registration of church members.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2><i class="fa-solid fa-envelope"></i> Contact</h2>
+
+    <div class="contact-buttons">
+      <!-- WhatsApp -->
+      <a href="https://wa.me/254715756371?text=Hello%20Marktech%2C%20I%E2%80%99d%20like%20to%20learn%20more%20about%20your%20services."
+         target="_blank"
+         class="btn whatsapp">
+        <i class="fa-brands fa-whatsapp"></i> WhatsApp
+      </a>
+
+      <!-- Email -->
+      <a href="mailto:wamukotajohnmark@gmail.com?subject=Inquiry%20from%20Marktech%20Website"
+         class="btn email">
+        <i class="fa-solid fa-envelope"></i> Email
+      </a>
+
+      <!-- GitHub -->
+      <a href="https://github.com/Sachoni"
+         target="_blank"
+         class="btn github">
+        <i class="fa-brands fa-github"></i> GitHub
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Marktech. All Rights Reserved.</p>
+  </footer>
+
+  <!-- JavaScript for mobile menu -->
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const nav = document.querySelector('nav');
+
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>

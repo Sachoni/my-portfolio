@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MarkTech — Service</title>
+  <style>
+    :root{
+      --bg:#0f1724; /* dark page bg for screens */
+      --card:#0b1220;
+      --muted:#9aa4b2;
+      --accent:#12b0ff;
+      --white:#ffffff;
+      --gap:18px;
+      --max-width:1100px;
+      --paper-bg:#ffffff; /* for print */
+    }
+
+    /* Reset (simple) */
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;}
+    body{
+      background:linear-gradient(180deg, #071021 0%, #0f1724 100%);
+      color:var(--white);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:40px 20px;
+      display:flex;
+      justify-content:center;
+    }
+
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+      background:var(--card);
+      border-radius:12px;
+      padding:28px;
+      box-shadow:0 8px 30px rgba(2,6,23,0.7);
+    }
+    
+    header{
+      display:flex;
+      align-items:center;
+      gap:18px;
+      margin-bottom:22px;
+    }
+
+    .brand{
+      display:flex;
+      flex-direction:column;
+      gap:4px;
+    }
+    .logo{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+    }
+    .logo .badge{
+      width:54px;height:54px;border-radius:10px;
+      background:linear-gradient(135deg,var(--accent),#0066cc);
+      display:inline-grid;place-items:center;
+      font-weight:700;color:var(--white);font-size:18px;
+      box-shadow:0 6px 18px rgba(18,176,255,0.15);
+    }
+    .title{
+      font-size:20px;font-weight:700;
+      letter-spacing:0.2px;
+    }
+    .subtitle{font-size:13px;color:var(--muted)}
+
+    /* grid */
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:var(--gap);
+    }
+
+    @media (max-width:880px){
+      .grid{grid-template-columns:1fr}
+    }
+
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:10px;
+      padding:14px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,0.03);
+    }
+
+    .card h3{
+      margin:0 0 8px 0;
+      font-size:16px;
+      letter-spacing:0.2px;
+    }
+    .card p.lead{margin:0 0 12px 0;color:var(--muted);font-size:13px}
+
+    table{
+      width:100%;
+      border-collapse:collapse;
+      font-size:13px;
+      color:var(--white);
+    }
+    th,td{
+      padding:8px 6px;
+      text-align:left;
+      border-bottom:1px dashed rgba(255,255,255,0.04);
+      vertical-align:top;
+    }
+    th{font-weight:700;color:var(--accent);font-size:13px}
+    td.price{text-align:right;color:var(--muted);min-width:110px}
+
+    /* footer */
+    footer{
+      margin-top:20px;
+      display:flex;justify-content:space-between;align-items:center;
+      color:var(--muted);font-size:13px;
+      border-top:1px solid rgba(255,255,255,0.03);
+      padding-top:14px;
+    }
+
+    .note{max-width:60%}
+    .copyright{opacity:0.9}
+
+    /* Print styles */
+    @media print{
+      body{background:var(--paper-bg);color:#000;padding:0}
+      .container{background:transparent;box-shadow:none;border-radius:0;padding:0;max-width:100%}
+      header .logo .badge{background:#000;color:#fff}
+      .card{background:transparent;border:none;padding:6px}
+      th{color:#000}
+      td, th{color:#000}
+      footer{display:none}
+    }
+
+    /* Small helpers */
+    .muted{color:var(--muted);font-size:12px}
+  </style>
+</head>
+<body>
+  <div class="container" role="main" aria-labelledby="catalog-title">
+    <header>
+      <div class="logo" aria-hidden="true">
+        <div class="badge">M</div>
+      </div>
+      <div class="brand">
+        <div id="catalog-title" class="title">MarkTech — Service</div>
+      </div>
+      <a  href="pay.html">Click Here For Details</a>
+    </header>
+
+    <main class="grid" aria-label="Service pricing grid">
+
+      <!-- OS Installation -->
+      <section class="card" aria-labelledby="os-title">
+        <h3 id="os-title">💻 OS Installation Services</h3>
+        <p class="lead">For desktops, laptops and servers.</p>
+        <table>
+          <tbody>
+            <tr><td>Windows Installation</td></tr>
+            <tr><td>Linux Installation</td></tr>
+            <tr><td>Server OS Setup</td></tr>
+            <tr><td>Dual Boot / Multi-OS</td></tr>
+            <tr><td>OS Imaging & Cloning (multi-machine)</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Document Editing -->
+      <section class="card" aria-labelledby="doc-title">
+        <h3 id="doc-title">📝 Document Editing & Design With AI</h3>
+        <p class="lead">Proofreading, formatting, print-ready layouts and corporate documentation.</p>
+        <table>
+          <tbody>
+            <tr><td>Basic Text Editing</td></tr>
+            <tr><td>Academic / Research Editing</td></tr>
+            <tr><td>Corporate Documents</td></tr>
+            <tr><td>Resume & Cover Letter</td></tr>
+            <tr><td>E-Book Formatting</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+
+      <!-- Web Development -->
+      <section class="card" aria-labelledby="web-title">
+        <h3 id="web-title">🌐 Web Development</h3>
+        <p class="lead">From one-page portfolios to e-commerce and custom web apps.</p>
+        <table>
+          <tbody>
+            <tr><td>One-Page / Portfolio</td></tr>
+            <tr><td>Business Website</td></tr>
+            <tr><td>E-Commerce (payments)</td></tr>
+            <tr><td>Blog / News Portal</td></tr>
+            <tr><td>Custom Web App</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Custom Software -->
+      <section class="card" aria-labelledby="software-title">
+        <h3 id="software-title">⚙️ Custom Software Engineering</h3>
+        <p class="lead">Bespoke systems and mobile apps (Android).</p>
+        <table>
+          <tbody>
+            <tr><td>Desktop Applications</td></tr>
+            <tr><td>Mobile Apps (Android)</td></tr>
+            <tr><td>Maintenance & Support</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+
+    </main>
+
+    <footer>
+      <div class="copyright">MarkTech © 2025</div>
+    </footer>
+  </div>
+</body>
+</html>
