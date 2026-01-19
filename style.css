@@ -55,12 +55,28 @@ nav a {
 nav a:hover {
   color: #00bfff;
 }
+.social-actions {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+}
 
-/* Hamburger Icon */
-.menu-toggle {
-  display: none;
-  font-size: 1.5rem;
+.social-actions button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
   cursor: pointer;
+  font-size: 14px;
+}
+
+#likeBtn {
+  background: #ff4d6d;
+  color: white;
+}
+
+#shareBtn {
+  background: #333;
+  color: white;
 }
 
 /* Hero Section */

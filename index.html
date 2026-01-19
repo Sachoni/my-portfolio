@@ -36,16 +36,27 @@
   </section>
 
   <!-- About -->
+<section id="about" class="about">
+  <img src="WhatsApp.jpeg" alt="photo" class="profile-img">
 
-  <section id="about" class="about">
-    <img src="WhatsApp.jpeg" alt="photo" class="profile-img">
-    <div>
-      <h2><a href="#about" title="About"><i class="fa-solid fa-user"></i></a> About Me</h2>
-      <p>
-        On-going computer science student.<br>
-      </p>
+  <div>
+    <h2>
+      <i class="fa-solid fa-user"></i> About Me
+    </h2>
+
+    <p>On-going computer science student.</p>
+
+    <div class="social-actions">
+      <button id="likeBtn">
+        ❤️ Like <span id="likeCount">0</span>
+      </button>
+
+      <button id="shareBtn">🔗 Share</button>
     </div>
-  </section>
+  </div>
+</section>
+
+
 
   <!-- Skills -->
 
@@ -103,14 +114,65 @@
   </footer>
 
   <!-- JavaScript for mobile menu -->
-  <script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const nav = document.querySelector('nav');
+  <script type="module">
+  // Import Firebase
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+  import { 
+    getFirestore, 
+    doc, 
+    onSnapshot, 
+    updateDoc, 
+    increment 
+  } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
-    menuToggle.addEventListener('click', () => {
-      nav.classList.toggle('active');
+  // 🔥 YOUR FIREBASE CONFIG
+  const firebaseConfig = {
+    apiKey: "AIzaSyCjDEuwEt5q6Zh2Lj0c1YrSVsrQ5HEVKBI",
+    authDomain: "my-portfolio-9c72c.firebaseapp.com",
+    projectId: "my-portfolio-9c72c",
+    storageBucket: "my-portfolio-9c72c.firebasestorage.app",
+    messagingSenderId: "712796705526",
+    appId: "1:712796705526:web:a84c6d5aafbaba784352d7"
+  };
+
+  // Init
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  const likeBtn = document.getElementById("likeBtn");
+  const likeCount = document.getElementById("likeCount");
+
+  // Reference to likes document
+  const likeDoc = doc(db, "portfolio", "likes");
+
+  // REAL-TIME LISTENER
+  onSnapshot(likeDoc, (docSnap) => {
+    if (docSnap.exists()) {
+      likeCount.textContent = docSnap.data().count;
+    }
+  });
+
+  // INCREMENT LIKES
+  likeBtn.addEventListener("click", async () => {
+    await updateDoc(likeDoc, {
+      count: increment(1)
     });
-  </script>
+  });
+
+  // SHARE BUTTON
+  document.getElementById("shareBtn").onclick = async () => {
+    if (navigator.share) {
+      await navigator.share({
+        title: "My Portfolio",
+        text: "Check out this portfolio!",
+        url: window.location.href
+      });
+    } else {
+      alert("Sharing not supported.");
+    }
+  };
+</script>
+
 
 </body>
 </html>
